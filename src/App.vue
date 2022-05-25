@@ -1,21 +1,32 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import HeroHeader from "./components/HeroHeader.vue";
+import HeroButton from "./components/HeroButton.vue";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HeroHeader />
+  <div class="button-layout">
+    <HeroButton
+      title="Rate a scammer"
+      subtitle="Based of Kitboga's L.O.V.E. system"
+    />
+    <HeroButton
+      title="Bingo"
+      subtitle="Based of Jim Browning's old Excel scammer Bingo made in Excel"
+    />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@use "./styles/global" as *;
+
+.button-layout {
+  display: grid;
+  grid-auto-flow: column;
+
+  > * {
+    width: 18rem;
+    margin: 0 auto;
+  }
 }
 </style>

@@ -16,7 +16,7 @@
     "app:build": "yarn build:for:electron && yarn electron:builder"
   },
   "build": {
-    "appId": "com.skpefusky.scammerino",
+    "appId": "com.skepfusky.scammerino",
     "productName": "MyApp",
     "copyright": "Copyright © 2022 ${author}",
     "mac": {
@@ -44,6 +44,8 @@
     "cross-env": "^7.0.3",
     "electron": "^18.2.4",
     "electron-builder": "^23.0.3",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
     "vue-tsc": "^0.34.7",
