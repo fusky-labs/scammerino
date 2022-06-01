@@ -1,18 +1,19 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
+
 const p = defineProps<{
   img?: string;
   title: string;
   subtitle: string;
+  link?: string;
 }>();
-
 </script>
 
 <template>
-  <div id="button">
-    <img :src="img" :alt="`Image for ${title} lmao`" />
+  <router-link :to="link" id="button">
     <h3>{{ title }}</h3>
     <span>{{ subtitle }}</span>
-  </div>
+  </router-link>
 </template>
 
 <style lang="scss" scoped>

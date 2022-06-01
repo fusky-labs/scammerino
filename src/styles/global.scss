@@ -12,6 +12,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @for $h from 1 through 6 {
   h#{$h} {
     font-family: 'Noto Sans', sans-serif;
