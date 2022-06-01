@@ -9,7 +9,6 @@ function createWindow() {
     height: 600,
     autoHideMenuBar: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
     },
     // icon: path.join(__dirname, 'public/icons/scammerino-128.ico'),
