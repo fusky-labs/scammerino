@@ -1,14 +1,15 @@
 <script setup lang="ts">
 const p = defineProps<{
-  img: string;
+  img?: string;
   title: string;
-  subtitle: string
-}>()
+  subtitle: string;
+}>();
+
 </script>
 
 <template>
   <div id="button">
-    <img src="" alt="lmao scammer" />
+    <img :src="img" :alt="`Image for ${title} lmao`" />
     <h3>{{ title }}</h3>
     <span>{{ subtitle }}</span>
   </div>
@@ -17,7 +18,7 @@ const p = defineProps<{
 <style lang="scss" scoped>
 #button {
   padding: 0.75rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   transition: background 200ms ease;
   display: flex;
   flex-direction: column;
