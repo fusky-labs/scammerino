@@ -12,6 +12,7 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
     },
+    // icon: path.join(__dirname, 'public/icons/scammerino-128.ico'),
   });
 
   mainWindow.loadURL(
